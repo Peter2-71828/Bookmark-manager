@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/peterdean/Projects/Week_4/Bookmark-manager/spec/bookmark_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/peterdean/Projects/Week_4/Bookmark-manager/spec/features/add_bookmark_spec.rb": {
         "lines": [
           1,
@@ -28,6 +44,6 @@
         ]
       }
     },
-    "timestamp": 1581595896
+    "timestamp": 1581603459
   }
 }
