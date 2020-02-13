@@ -8,11 +8,12 @@ class Bookmark
   def initialize(title:, url:)
     @title = title
     @url = url
+    @list = []
   end
 
   def self.all
     connection = Environment.connection
-    connection.exec("SELECT (title) FROM bookmarks").map { |title| title['title'] }
+    p connection.exec("SELECT (title, url) FROM bookmarks").each { |title, url| @list << Bookmark.new(title, url) }
   end
 
   def self.add_bookmark(title, url)
