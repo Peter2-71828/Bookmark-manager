@@ -15,9 +15,8 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmark_list' do
-    ENV
     @list = Bookmark.all
     erb :bookmark_list
   end
-  #  run! if app_file == $0
+
 end

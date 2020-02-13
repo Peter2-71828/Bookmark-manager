@@ -11,8 +11,7 @@ class Bookmark
 
   def self.all
     connection = Bookmark.set_env
-    result = connection.exec("SELECT * FROM bookmarks")
-    result.map { |bookmark| bookmark['url'] }
+    connection.exec("SELECT url FROM bookmarks").map { |bookmark| bookmark['url'] }
   end
 
   def self.add_bookmark(new_bookmark)
