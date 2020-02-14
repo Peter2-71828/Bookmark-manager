@@ -10,11 +10,17 @@ class Bookmark
     @url = url
   end
 
+  def self.create(bookmarks)
+    @list = []
+    bookmarks.each { |title, url| @list << Bookmark.new(title, url)}
+    return @list
+  end
+
   def self.all
     connection = Environment.connection
-    titles = url = connection.exec("SELECT (title) FROM bookmarks").map { |title| title['title'] }
+    titles = connection.exec("SELECT (title) FROM bookmarks").map { |title| title['title'] }
     urls = connection.exec("SELECT (url) FROM bookmarks").map { |url| url['url'] }
-    list = Hash[titles.zip(urls)]
+    Bookmark.create(Hash[titles.zip(urls)])
   end
 
   def self.add_bookmark(title, url)
