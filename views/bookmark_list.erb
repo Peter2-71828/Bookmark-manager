@@ -1,7 +1,9 @@
 <h1> Bookmark Manager </h1>
 
 <ul>
-  <% @list.keys.each do |bookmark|%>
-    <li><%= bookmark %></li>
+  <% @list.each do |title, url|%>
+    <li>
+      <a href="<%= url %>"><%= title %></a>
+    </li>
   <% end %>
 </ul>
