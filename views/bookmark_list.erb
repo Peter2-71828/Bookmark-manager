@@ -1,7 +1,7 @@
 <h1> Bookmark Manager </h1>
 
 <ul>
-  <% @list.each do |bookmark|%>
+  <% @list.keys.each do |bookmark|%>
     <li><%= bookmark %></li>
   <% end %>
 </ul>
