@@ -3,7 +3,7 @@ require_relative './environment.rb'
 
 class Bookmark
 
-  attr_reader :title, :url, :titles, :urls
+  attr_reader :title, :url
 
   def initialize(title, url)
     @title = title
