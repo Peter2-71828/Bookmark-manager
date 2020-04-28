@@ -28,3 +28,10 @@ I would like to add a new bookmark
 * `psql`
 * `admin=# CREATE DATABASE "bookmark_manager_test";`
 * `admin=# CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));`
+
+## How To Use
+* clone directory
+* run
+* `bundle`
+* `rackup`
+* go to http://localhost:9292/ in your browser 
